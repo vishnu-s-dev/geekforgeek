@@ -1,0 +1,13 @@
+from collections import Counter
+
+class Solution:
+    def majorityElement(self, arr):
+        #code here
+        n=len(arr)
+        freq = Counter(arr)
+        
+        for num in freq:
+            if(freq[num]>(n/2)):
+                return(num)
+            else:
+                return(-1)
