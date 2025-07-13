@@ -1,0 +1,12 @@
+from collections import Counter
+
+class Solution:
+    def findDuplicates(self, arr):
+        freq = Counter(arr)
+        result = []
+        
+        for num in freq:
+            if freq[num] > 1:
+                result.append(num)
+        
+        return result
