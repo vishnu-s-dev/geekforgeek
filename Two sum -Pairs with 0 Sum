@@ -1,0 +1,21 @@
+#User function Template for python3
+
+class Solution:
+    def getPairs(self, arr):
+        # code here
+        arr1=[]
+        check=[]
+        for i in range(len(arr)):
+            for j in range(i+1,len(arr)):
+                
+                    if(arr[i]+arr[j]==0 ):
+                        a,b=arr[i],arr[j]
+                        
+                        if( a not in check and b not in check ):
+                            arr1.append(sorted([a,b]))
+                            check.append(a)
+                            check.append(b)
+                        
+                        
+        arr1.sort()
+        return(arr1)
